@@ -2,9 +2,10 @@ import pandas as pd
 import dd2dms
 import openpyxl
 
+# Put your Excel dataset's title in here
 df = pd.read_excel('sawit_wgs84.xlsx')
 
-# Create new columns for DMS values
+# Create new columns for DMS values (you can change it to anything)
 df['lat_degree'] = None
 df['lat_minute'] = None
 df['lat_second'] = None
@@ -18,6 +19,7 @@ df['long_pole'] = None
 # Process each row in the DataFrame and convert the decimal degree to DMS
 for index, row in df.iterrows():
     # Use .at to put the converted value into the specific row/column
+    # Change the 'x' and 'y' based on your latitude and longitude column's name (in here, x is longitude and y is latitude)
     df.at[index,'lat_degree'] = dd2dms.get_degree(row['y'])
     df.at[index,'lat_minute'] = dd2dms.get_minutes(row['y'])
     df.at[index,'lat_second'] = dd2dms.get_second(row['y'])
@@ -27,6 +29,6 @@ for index, row in df.iterrows():
     df.at[index,'long_second'] = dd2dms.get_second(row['x'])
     df.at[index,'long_pole'] = dd2dms.get_longpole(row['x'])
     
-# Save the updated DataFrame to a new Excel file
+# Save the updated DataFrame to a new Excel file (change the title to match your own need)
 df.to_excel('sawit_wgs84_dms.xlsx', index=False)
 print('Conversion complete! Check your new Excel file.')
