@@ -20,3 +20,14 @@ In professional GIS workflows, coordinates are often provided in decimal format,
 2. Change the file's name to your Excel dataset.
 3. Change the column's name.
 4. Get your new updated dataset.
+
+## Example
+**From** 
+<img width="668" height="448" alt="image" src="https://github.com/user-attachments/assets/038e9017-9c28-46f9-b64e-4fba608602dc" />
+
+
+**To**
+<img width="1133" height="447" alt="image" src="https://github.com/user-attachments/assets/3c6fc3ad-fec3-4291-bd38-62751470e008" />
+
+
+
