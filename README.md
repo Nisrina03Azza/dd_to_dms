@@ -16,10 +16,11 @@ In professional GIS workflows, coordinates are often provided in decimal format,
 - Modularity: Features a separate calculation engine (dd2dms.py) to keep the data processing logic clean and reusable.
 
 ## How to Use
-1. Run the script: python latlong.py 
-2. Change the file's name to your Excel dataset.
-3. Change the column's name.
-4. Get your new updated dataset.
+1. Install the latest pandas and openpyxl library
+2. Run the script: python latlong.py 
+3. Change the file's name to your Excel dataset.
+4. Change the column's name.
+5. Get your new updated dataset.
 
 ## Example
 **From** 
